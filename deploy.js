@@ -34,24 +34,16 @@ async function deploy() {
       .setName("rutbedegistir")
       .setDescription("Bir kullanıcıya istediğin rütbeyi verir.")
       .addStringOption(option =>
-        option
-          .setName("kullanici")
+        option.setName("kullanici")
           .setDescription("Roblox kullanıcı adı")
-          .setRequired(true),
-      )
-      .addIntegerOption(option =>
-        option
-          .setName("rank")
-          .setDescription("Verilecek rütbeyi seç")
           .setRequired(true)
-          .addChoices(...rankChoices),
       )
       .addStringOption(option =>
-        option
-          .setName("sebep")
+        option.setName("sebep")
           .setDescription("Rütbe değişikliği sebebi")
-          .setRequired(true),
+          .setRequired(true)
       ),
+
 
     // 🔷 /bransrutbe
     new SlashCommandBuilder()
@@ -243,3 +235,4 @@ async function deploy() {
 }
 
 deploy();
+
